@@ -19,7 +19,6 @@ export default class Product extends Component{
         })
 
         .then(products =>{
-           console.log(products)
            this.setState({productsList: products.results})
          })
 
@@ -42,7 +41,7 @@ export default class Product extends Component{
                                             <th>Nombre</th>
                                             <th>Precio</th>
                                             <th>Descuento</th>
-                                            <th>Categoría ID</th>
+                                            <th>Categoría</th>
                                             <th>Descripción</th>
 										</tr>
 									</thead>

@@ -1,5 +1,4 @@
 import React from 'react';
-import imagenFondo from '../assets/images/homero-Dona.png';
 
 function LastUser(props){
     return(

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Category  from './Category';
-const API_CATEGORY = 'http://localhost:3000/api/categories'
+const API_CATEGORY = 'http://localhost:3000/api/products'
 
 export default class CategoriesInDb extends Component {
     constructor(props) {
@@ -20,7 +20,10 @@ export default class CategoriesInDb extends Component {
         })
 
         .then(categories =>{
-           this.setState({categoriesList: categories.results})
+           this.setState({categoriesList: Object.values(categories.meta)})
+           //console.log('kk',this.state.categoriesList)
+          console.log('kk', Object.values(categories.meta))
+
          })
 
         .catch(error => console.log(error))
@@ -39,7 +42,10 @@ export default class CategoriesInDb extends Component {
                             <div className="row">
                             {
                                     this.state.categoriesList.map((category,index)=>{
-                                        return  <Category  {...category}  key={index} />
+                                        if (index !==0){
+                                            return  <Category  {...category}  key={index} />
+                                        }
+                                        
                                     })
                                 }
                             </div>

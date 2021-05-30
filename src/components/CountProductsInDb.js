@@ -24,7 +24,7 @@ export default class CountProductsInDb extends Component {
         })
 
         .then(products =>{
-           this.setState({productsCount: products.meta})
+           this.setState({productsCount: products.meta.count})
            console.log(products.meta)
          })
 

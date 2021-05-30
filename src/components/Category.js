@@ -21,7 +21,7 @@ class Category extends React.Component{
             <div onMouseOver = { this.fondoCajaIn } onMouseLeave ={this.fondoCajaOut} className="col-lg-6 mb-4">
                 <div className="card text-white bg-dark shadow">
                     <div className={`card-body ${this.state.active && "bg-secondary"}`}>
-                        {this.props.name}
+                          {this.props.name} : {this.props.count}
                     </div>
                 </div>
             </div>

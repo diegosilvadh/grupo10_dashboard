@@ -5,11 +5,11 @@ function ProductList(props){
         <React.Fragment>
 									<tbody>
 										<tr>
-											<td>{props.id_product}</td>
+											<td>{props.id}</td>
 											<td>{props.name}</td>
 											<td>{props.price}</td>
-											<td>{props.discount_value}</td>
-                                            <td>{props.id_category}</td>
+											<td>{props.discountValue}</td>
+                                            <td>{props.category}</td>
 											<td>{props.description}</td>
 										</tr>
 									</tbody>
